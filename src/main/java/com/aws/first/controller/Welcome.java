@@ -12,7 +12,7 @@ public class Welcome {
     }
 	
 	@GetMapping("/welcometojenkins")
-    public String welcome(){
+    public String welcomeToJenkins(){
         return "Welcome to Jenkins";
     }
 
