@@ -15,5 +15,10 @@ public class Welcome {
     public String welcomeToJenkins(){
         return "Welcome to Jenkins";
     }
+	
+	@GetMapping("/sayhello")
+    public String sayHello(){
+        return "Hello User";
+    }
 
 }
