@@ -10,26 +10,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building branch: ${env.BRANCH_NAME}"
+                sh 'mvn clean package'
             }
         }
-
-        stage('Deploy master') {
-            when {
-                branch 'master'
-            }
-            steps {
-                echo "Deploying to master"
-            }
-        }
-
-        stage('Deploy Prod') {
-            when {
-                branch 'main'
-            }
-            steps {
-                echo "Deploying to PROD"
-            }
-        }
+        
+        
     }
 }
